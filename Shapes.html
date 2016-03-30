@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        canvas{
+            background-color: silver;
+        }
+        button{
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: silver;
+            color: white;
+            padding: 5px 10px;
+        }
+        #controllers{
+            width: 1000px;
+            height: 150px;
+            background-color: wheat;
+        }
+        #buttons{
+            width: 1000px;
+            text-align: center;
+        }
+        .coor{
+            width: 50px;
+            height: 20px;
+            background-color: aqua;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        #select{
+            width: 500px;
+        }
+        .hidden,#controllers{
+            display: none;
+        }
+    </style>
+</head>
+<script src="Shapes.js" defer></script>
+<script src="canvas.js" defer></script>
+<body>
+
+<div id="buttons">
+    <button id="newCircle">Circle</button>
+    <button id="newRect">Rectangle</button>
+    <button id="newTriangle">Triangle</button>
+    <button id="newSegment">Segment</button>
+
+</div>
+<div id="controllers">
+    <label for="x">Enter X :</label>
+    <input type="text" class="coor" id="x" />
+
+    <label for="y">Enter Y :</label>
+    <input type="text" class="coor" id="y" />
+
+    <label for="color">Choose color :</label>
+    <input type="color"  id="color" />
+
+    <div id="circle" class="hidden">
+        <label for="radius">Enter radius :</label>
+        <input type="text" class="coor" id="radius" />
+        <button id="addCircle">Add</button>
+
+    </div>
+    <div id="rect" class="hidden">
+        <label for="sideA">Enter side A :</label>
+        <input type="text" class="coor" id="sideA" />
+        <label for="sideB">Enter side B :</label>
+        <input type="text" class="coor" id="sideB" />
+        <button id="addRect">Add</button>
+
+    </div>
+    <div id="tri" class="hidden">
+        <label for="x2">Enter side X2 :</label>
+        <input type="text" class="coor" id="x2" />
+        <label for="y2">Enter side Y2 :</label>
+        <input type="text" class="coor" id="y2" />
+        <label for="x3">Enter side X3 :</label>
+        <input type="text" class="coor" id="x3" />
+        <label for="y3">Enter side Y3 :</label>
+        <input type="text" class="coor" id="y3" />
+        <button id="addTri">Add</button>
+
+    </div>
+    <div id="seg" class="hidden">
+        <label for="segX2">Enter side X2 :</label>
+        <input type="text" class="coor" id="segX2" />
+        <label for="segY2">Enter side Y2 :</label>
+        <input type="text" class="coor" id="segY2" />
+        <button id="addSeg">Add</button>
+
+    </div>
+
+</div>
+<div>
+<canvas id="myCanvas" width="1000px" height="500px"></canvas>
+</div>
+<select id="select" size="10"></select>
+</body>
+</html>      
